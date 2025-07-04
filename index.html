@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Store</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="menu">
+        <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <ion-icon name="grid-outline"></ion-icon>
+            </label>
+
+            <label class="logo">Food Store</label>
+
+            <ul>
+                <li><a href="#hero-section" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#app">Download App</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- End Menu -->
+
+    <!-- Hero Section -->
+    <div class="section flex" id="hero-section">
+        <div class="text">
+            <h1 class="primary">
+                Welcome to My Food Store</span>
+            </h1>
+
+            <p class="tertiary">
+                Welcome to my food store, when cullnary delights await you at every turn!
+                Nestled in the heart of bustling city, we pride ourselves on offering a diverse
+                selection of fresh and high quality ingredients sourced from local farmers and producers.
+            </p>
+
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+        <div class="visual">
+            <img src="hamburger-1238246_640 (1).jpg" alt="" />
+        </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <section class="section-meals">
+        <div class="txt">
+            <h1>Our Product</h1>
+        </div>
+        <div class="container grid grid--3-cols margin-right-md">
+            <div class="meal">
+                <img src="data:image/jpeg;base64,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"
+                    class="meal-img" alt="Japanese Gyozas" />
+                <div class="meal-content">
+                    <div class="meal-tags">
+                        <span class="tag tag--vegetarian">Vegetarian</span>
+                    </div>
+                    <p class="meal-title">Japanese Gyozas</p>
+                    <ul class="meal-attributes">
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="flame-outline"></ion-icon><span><strong>650</strong>
+                                calories</span>
+                        </li>
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="restaurant-outline"></ion-icon><span>NutriScore &reg;
+                                <strong>74</strong></span>
+                        </li>
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="star-outline"></ion-icon><span><strong>4.9</strong> rating
+                                (537)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="meal">
+                <img src="https://github.com/erenburuk/html-css-course/blob/main/07-Omnifood-Desktop/img/meals/meal-2.jpg?raw=true"
+                    class="meal-img" alt="Avocado Salad" />
+                <div class="meal-content">
+                    <div class="meal-tags">
+                        <span class="tag tag--vegan">Vegan</span>
+                        <span class="tag tag--paleo">Paleo</span>
+                    </div>
+                    <p class="meal-title">Avocado Salad</p>
+                    <ul class="meal-attributes">
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="flame-outline"></ion-icon><span><strong>400</strong>
+                                calories</span>
+                        </li>
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="restaurant-outline"></ion-icon><span>NutriScore &reg;
+                                <strong>92</strong></span>
+                        </li>
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="star-outline"></ion-icon><span><strong>4.8</strong> rating
+                                (441)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="meal">
+                <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    class="meal-img" alt="Japanese Gyozas" />
+                <div class="meal-content">
+                    <div class="meal-tags">
+                        <span class="tag tag--vegan">Vegan</span>
+                    </div>
+                    <p class="meal-title">Thai Red Curry</p>
+                    <ul class="meal-attributes">
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="flame-outline"></ion-icon><span><strong>450</strong>
+                                calories</span>
+                        </li>
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="restaurant-outline"></ion-icon><span>NutriScore &reg;
+                                <strong>86</strong></span>
+                        </li>
+                        <li class="meal-attribute">
+                            <ion-icon class="meal-icon" name="star-outline"></ion-icon><span><strong>4.4</strong> rating
+                                (349)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- How It Works -->
+    <div class="section" id="how-it-works">
+        <div class="txt">
+            <h1>How It's Work</h1>
+        </div>
+
+        <div class="container flex">
+            <div class="box">
+                <h3>Easy Order</h3>
+                <ion-icon name="timer-outline"></ion-icon>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+                    non?
+                </p>
+            </div>
+
+            <div class="box active">
+                <h3>Best Quality</h3>
+                <ion-icon style="color: black;" name="trophy-outline"></ion-icon>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+                    non?
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Fast Delivery</h3>
+                <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+                    non?
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End How It Works -->
+
+    <!-- About -->
+    <div class="section" id="about">
+        <div class="container flex">
+            <div class="visual">
+                <img src="hamburger-1238246_640 (1).jpg" alt="" />
+            </div>
+            <div class="text">
+                <div class="secondary">About Our Restaurant</div>
+                <h2 class="primary">200+</h2>
+
+                <h3 class="tertiary">Our Delicious Food</h3>
+
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
+                    itaque saepe id hic rem doloribus quas esse voluptatibus eius sequi,
+                    possimus maxime dolores tempore facilis fugit porro mollitia, est
+                    consequuntur.
+                </p>
+
+                <a href="#menu" class="btn">Explore Menu</a>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Restaurant Menu -->
+    <div class="section" id="menu">
+        <div class="container-menu">
+            <ul class="category">
+                <li class="active">All</li>
+                <li>Biryani</li>
+                <li>Chicken</li>
+                <li>Pizza</li>
+                <li>Burger</li>
+                <li>Pasta</li>
+            </ul>
+
+            <div class="container">
+                <div class="restaurant-menu">
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-1.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-2.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-1.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-3.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-1.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-4.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-5.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/menu-6.jpg"
+                            alt="" />
+
+                        <div class="title">Food Restaurant | Chineese & Thai</div>
+
+                        <div class="location">Lahore, Pakistan</div>
+
+                        <div class="order flex">
+                            <div class="price">$25.00</div>
+                            <a href="#" class="btn btn-menu">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Restaurant Menu -->
+
+    <!-- FAQ -->
+    <div class="section" id="faq">
+        <h2 class="secondary">Frequently Asked Questions</h2>
+
+        <div class="faq">
+            <details>
+                <summary>I got wrong food what shoud I do?</summary>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Asperiores amet sunt at?
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>I got wrong food what shoud I do?</summary>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Asperiores amet sunt at?
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>I got wrong food what shoud I do?</summary>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Asperiores amet sunt at?
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>I got wrong food what shoud I do?</summary>
+                <div class="content">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Asperiores amet sunt at?
+                    </p>
+                </div>
+            </details>
+        </div>
+    </div>
+    <!-- End FAQ -->
+
+    <!-- App -->
+    <div class="section" id="app">
+        <div class="container flex">
+            <div class="app-photo">
+                <img width="500px" src="pngegg.png" alt="" />
+            </div>
+
+            <div class="text">
+                <h2 class="secondary">Download The FoodLover App</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                    laudantium velit iure illo facilis at delectus sint, doloribus
+                    magnam officiis rerum nobis, perspiciatis maxime repellat qui
+                    consequuntur? Aspernatur, architecto voluptatum!
+                </p>
+
+                <div class="download flex">
+                    <div class="app-store">
+                        <ion-icon name="logo-google-playstore"></ion-icon>
+                        <p>
+                            GET IT ON <br />
+                            <span>Google Play</span>
+                        </p>
+                    </div>
+
+                    <div class="app-store">
+                        <ion-icon name="logo-apple"></ion-icon>
+                        <p>
+                            Donload on the <br />
+                            <span>App Store</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End App -->
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container flex">
+            <div class="footer-about">
+                <h2>About</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                    aspernatur sit deleniti enim voluptas voluptatum incidunt rerum,
+                    exercitationem voluptate nemo quo impedit ad perspiciatis tempore
+                    nulla dolore fugit, fuga eos.
+                </p>
+            </div>
+
+            <div class="footer-category">
+                <h2>Our Menu</h2>
+
+                <ul>
+                    <li>Biryani</li>
+                    <li>Chicken</li>
+                    <li>Pizza</li>
+                    <li>Burger</li>
+                    <li>Pasta</li>
+                </ul>
+            </div>
+
+            <div class="quick-links">
+                <h2>Quick Links</h2>
+
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Menu</li>
+                    <li>Order</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+
+            <div class="get-in-touch">
+                <h2>Get in touch</h2>
+                <ul>
+                    <li>Account</li>
+                    <li>Support Center</li>
+                    <li>Feedback</li>
+                    <li>Suggession</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Ion Icons Js -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+</body>
+
+</html>
